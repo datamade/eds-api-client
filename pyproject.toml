@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "eds_api_client_datamade"
+version = "0.0.1"
+authors = [
+    { name="DataMade", email="info@datamade.us"}
+]
+description = "API client for Chicago Economic Disclosure Statements (EDS)"
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/datamade/eds-api-client"
+"Bug Tracker" = "https://github.com/datamade/eds-api-client/issues"
