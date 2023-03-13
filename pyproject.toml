@@ -6,8 +6,8 @@ build-backend = "hatchling.build"
 name = "eds_api_client_datamade"
 version = "0.0.1"
 dependencies = [
-    "lxml==3.7.2",
-    "scrapelib==1.1.0"
+    "lxml==4.9.2",
+    "scrapelib==2.1.0"
 ]
 authors = [
     { name="DataMade", email="info@datamade.us"}
