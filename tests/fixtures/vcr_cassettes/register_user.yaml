@@ -1,0 +1,105 @@
+interactions:
+- request:
+    body: username=fakebiglots&client_secret=fakesecret&scope=write&password=Fakepassword1&grant_type=password&client_id=fakebiglots
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '124'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.13.0
+    method: POST
+    uri: https://apiqa.chicago.gov/edsapi/oauth/token
+  response:
+    body:
+      string: '{"access_token":"4048f108-2fae-42d1-9d30-ae3b9bf545b1","token_type":"bearer","expires_in":3599,"scope":"write"}'
+    headers:
+      Cache-Control:
+      - no-store
+      Connection:
+      - Keep-Alive
+      Content-Length:
+      - '111'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 31 Mar 2021 18:44:51 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Pragma:
+      - no-cache
+      Server:
+      - CA-API-Gateway/9.0
+      Set-Cookie:
+      - BIGipServerwebapps1qa.chicago.gov_https.app~webapps1qa.chicago.gov_https_pool=958683146.21308.0000;
+        path=/; Httponly; Secure
+      - BIGipServerrevproxy.chicago.gov_https.app~revproxy.chicago.gov_https_pool=387080202.52008.0000;
+        path=/; Httponly; Secure
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"user": {"firstName": "large", "title": "lots and lots", "phone": "662-339-4512",
+      "secretQuestion": 1, "answerQuestion": "Chicago", "userId": "biglotsuser",
+      "password": "BadPassword1", "lastName": "lots", "email": "large.lots@datamade.us"},
+      "company": {"companyName": "Big Lot Company II", "ssn": "125-43-1242", "zipCode":
+      "60606", "city": "Chicago", "state": "IL", "address1": "33 W Main St", "country":
+      "United States"}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 4048f108-2fae-42d1-9d30-ae3b9bf545b1
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '441'
+      Content-Type:
+      - application/json
+      Cookie:
+      - BIGipServerwebapps1qa.chicago.gov_https.app~webapps1qa.chicago.gov_https_pool=958683146.21308.0000;
+        BIGipServerrevproxy.chicago.gov_https.app~revproxy.chicago.gov_https_pool=387080202.52008.0000
+      User-Agent:
+      - python-requests/2.13.0
+    method: POST
+    uri: https://apiqa.chicago.gov/edsapi/rest/user/
+  response:
+    body:
+      string: '{"status":"Success"}'
+    headers:
+      Connection:
+      - Keep-Alive
+      Content-Length:
+      - '20'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 31 Mar 2021 18:44:53 GMT
+      Keep-Alive:
+      - timeout=5, max=99
+      Server:
+      - CA-API-Gateway/9.0
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -1,0 +1,205 @@
+interactions:
+- request:
+    body: username=fakeuser&client_secret=fakesecret&scope=write&password=Fakepassword1&grant_type=password&client_id=fakebiglots
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '124'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.13.0
+    method: POST
+    uri: https://apiqa.chicago.gov/edsapi/oauth/token
+  response:
+    body:
+      string: '{"access_token":"b75e929d-e005-4400-8a1c-0de30cf58980","token_type":"bearer","expires_in":2397,"scope":"write"}'
+    headers:
+      Cache-Control:
+      - no-store
+      Connection:
+      - Keep-Alive
+      Content-Length:
+      - '111'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 31 Mar 2021 21:04:31 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Pragma:
+      - no-cache
+      Server:
+      - CA-API-Gateway/9.0
+      Set-Cookie:
+      - BIGipServerwebapps1qa.chicago.gov_https.app~webapps1qa.chicago.gov_https_pool=958683146.21308.0000;
+        path=/; Httponly; Secure
+      - BIGipServerrevproxy.chicago.gov_https.app~revproxy.chicago.gov_https_pool=403857418.52008.0000;
+        path=/; Httponly; Secure
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"edsQuestions": [{"textResponse": "Person or Individual", "questionCode":
+      "DBA"}, {"textResponse": "", "questionCode": "POC_FAX"}, {"textResponse": "N/A",
+      "questionCode": "PO_DESC"}, {"questionCode": "CITY_DEPARTMENT_OR_AGENCY", "singleChoosableResponse":
+      "DEPT_OF_PLANNING_AND_DEVELOPMENT"}, {"questionCode": "NATURE_DISCLOSING_PARTY       ",
+      "singleChoosableResponse": "PERSON_OR_SOLE_PROPRIETOR"}, {"questionCode": "FURTHERCLARIFICATIONS",
+      "singleChoosableResponse": "I_CERTIFY"}, {"questionCode": "STATUS_FINANCIAL_INSTITUTION",
+      "singleChoosableResponse": "IS_NOT_A_FINANCIAL_INSTITUTION"}, {"questionCode":
+      "SLAVERY", "singleChoosableResponse": "I_CAN_MAKE_THE_ABOVE_VERIFICATION"},
+      {"questionCode": "FEDERALLY_FUNDED", "singleChoosableResponse": "NO"}, {"multiChoosableResponse":
+      ["I_ACKNOWLEDGE_CONSENT"], "questionCode": "ACKNOWLEDGEMENTS"}, {"multiChoosableResponse":
+      ["I_ACKNOWLEDGE_CONSENT"], "questionCode": "ACKNOWLEDGEMENTS2"}, {"questionCode":
+      "APPXC", "singleChoosableResponse": "NOT_APPLICANT_THAT_IS_A_CONTRACTOR"}, {"textResponse":
+      "None", "questionCode": "GENERAL_COMMENT"}, {"questionCode": "CERTIFY5_EXPLAIN",
+      "singleChoosableResponse": "N/A"}, {"addressResponse": {"address1": "123 S Main",
+      "state": "IL", "address2": "", "country": "United States", "city": "Chicago",
+      "zipCode": "12345"}, "questionCode": "DISCLOSING_ADDRESS"}, {"textResponse":
+      "123-456-7890", "questionCode": "POC_PHONE"}, {"questionCode": "RELATIONSHIP",
+      "singleChoosableResponse": "YES"}, {"questionCode": "DISCLOSING_PROVIDE_INCOME",
+      "singleChoosableResponse": "NO"}, {"complexResponse": [[{"nameResponse": {"lastName":
+      "Eder", "firstName": "Derek"}, "responseCode": "ELECTED_OFFICIAL"}, {"textResponse":
+      "I raked his leaves.", "responseCode": "INCOME_COMPENSATION"}]], "questionCode":
+      "RELATIONSHIP_DETAIL"}, {"questionCode": "FINANTIAL_INTEREST", "singleChoosableResponse":
+      "YES"}, {"complexResponse": [[{"nameResponse": {"lastName": "Compton", "firstName":
+      "Regina"}, "responseCode": "NAME"}, {"responseCode": "ROLE", "singleChoosableResponse":
+      "CITY_ELECTED_OFFICIAL"}, {"textResponse": "I rent my apartment from her.",
+      "responseCode": "INTERESTS"}]], "questionCode": "CITY_OFF_NAMES"}, {"questionCode":
+      "RETAINED_ENTITIES_EXIST", "singleChoosableResponse": "NO"}, {"questionCode":
+      "RETAINED_PERSONS_EXIST", "singleChoosableResponse": "YES"}, {"complexResponse":
+      [[{"nameResponse": {"lastName": "van Zanten", "firstName": "Eric"}, "responseCode":
+      "NAME"}, {"responseCode": "ANTICIPATED_RETAINED", "singleChoosableResponse":
+      "NO"}, {"addressResponse": {"address1": "123 N Main", "state": "IL", "address2":
+      "", "country": "United States", "city": "Chicago", "zipCode": "12345"}, "responseCode":
+      "BUSINESS_ADDRESS"}, {"multiChoosableResponse": ["LOBBYIST"], "responseCode":
+      "RELATIONSHIP"}, {"textResponse": "$$", "responseCode": "FEES"}, {"multiChoosableResponse":
+      ["ESTIMATED"], "responseCode": "ESTIMATED_PAID"}]], "questionCode": "RETAINED_PARTIES_PERSONS"},
+      {"questionCode": "CHILD_SUPPORT", "singleChoosableResponse": "NO"}, {"questionCode":
+      "CERTIFY1", "singleChoosableResponse": "I_CERTIFY"}, {"questionCode": "CERTIFY2",
+      "singleChoosableResponse": "I_UNABLE_TO_CERTIFY"}, {"textResponse": "live together,
+      die alone", "questionCode": "CERTIFY2_EXPLAIN"}, {"questionCode": "CERTIFY3",
+      "singleChoosableResponse": "I_CERTIFY"}, {"questionCode": "CERTIFY4", "singleChoosableResponse":
+      "I_UNABLE_TO_CERTIFY"}, {"textResponse": "\"most likely to succeed\"", "questionCode":
+      "CERTIFY4_EXPLAIN"}, {"questionCode": "CERTIFY6", "singleChoosableResponse":
+      "I_CERTIFY"}, {"questionCode": "CERTIFY7", "singleChoosableResponse": "I_HAVE_A_DISCLOSURE_TO_MAKE"},
+      {"complexResponse": [[{"nameResponse": {"lastName": "Emanuel", "firstName":
+      "Rahm"}, "responseCode": "NAME"}, {"textResponse": "Mayor", "responseCode":
+      "CITY_TITLE"}]], "questionCode": "CERTIFY7_EXPLAIN"}, {"questionCode": "H1CERTIFY",
+      "singleChoosableResponse": "I_CERTIFY"}, {"questionCode": "CERTIFY5", "singleChoosableResponse":
+      "I_CERTIFY"}, {"questionCode": "H2CERTIFY", "singleChoosableResponse": "I_UNABLE_TO_CERTIFY"},
+      {"textResponse": "don''t tread on me", "questionCode": "H2_EXPLAIN"}, {"questionCode":
+      "H3CERTIFY", "singleChoosableResponse": "I_CERTIFY"}, {"questionCode": "CERTIFY8",
+      "singleChoosableResponse": "I_HAVE_A_DISCLOSURE_TO_MAKE"}, {"complexResponse":
+      [[{"nameResponse": {"lastName": "Eder", "firstName": "Derek"}, "responseCode":
+      "CITY_RECIPIENT"}, {"textResponse": "Time", "responseCode": "GIFT_DESCRIPTION"},
+      {"textResponse": "$400", "responseCode": "VALUE_OF_GIFT"}]], "questionCode":
+      "CERTIFY8_EXPLAIN"}, {"questionCode": "CITY_OFFICIAL", "singleChoosableResponse":
+      "NO"}, {"questionCode": "FAMILIAL_RELATIONSHIP", "singleChoosableResponse":
+      "YES"}, {"complexResponse": [[{"nameResponse": {"lastName": "Valencia", "firstName":
+      "Anna"}, "responseCode": "CITY_RELATIVES_NAME"}, {"responseCode": "RELATIVES_TITLE",
+      "singleChoosableResponse": "CITY_CLERK"}, {"responseCode": "RELATION_TO_OFFICIAL",
+      "singleChoosableResponse": "SISTER"}]], "questionCode": "FAMILIAL_RELATIONSHIP_DETAIL"},
+      {"questionCode": "APBQ1", "singleChoosableResponse": "YES"}, {"complexResponse":
+      [[{"nameResponse": {"lastName": "cushman", "firstName": "hannah"}, "responseCode":
+      "INDIVIDUAL_NAME"}]], "questionCode": "APBQ3"}, {"complexResponse": [[{"addressResponse":
+      {"address1": "456 S Main", "state": "IL", "address2": "", "country": "United
+      States", "city": "Chicago", "zipCode": "34567"}, "responseCode": "BUILDING_ADDRESS"}]],
+      "questionCode": "APBQ4"}]}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer b75e929d-e005-4400-8a1c-0de30cf58980
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '5510'
+      Content-Type:
+      - application/json
+      Cookie:
+      - BIGipServerwebapps1qa.chicago.gov_https.app~webapps1qa.chicago.gov_https_pool=958683146.21308.0000;
+        BIGipServerrevproxy.chicago.gov_https.app~revproxy.chicago.gov_https_pool=403857418.52008.0000
+      User-Agent:
+      - python-requests/2.13.0
+    method: POST
+    uri: https://apiqa.chicago.gov/edsapi/rest/eds/
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAEA6pWSk0p9ivNTUotUrJSMjK2NDdV0lFKLkpNLElNcaoEimUk5uUlZsQnlxZn5Cbm
+        ISRdgISSlaGZobmRkYmZuZGBsamOUkFRZi5QtKSoNFVHqbgksaS0GGhEcKiTr2dIiKsLUHdZal5K
+        PtCuaijLLxGkAWqLggLMmlqgPfl5JYnJJSClqbmJmTlwVXpQRQ4piSWJuYkpqXpAW3SU8lBMgqoB
+        ipcWpxZ5psBl4D4BWlGcmlySmZ8HdGN0NYwDdZB7al5qUWKOgmdeWn5RbiJIBmhWYWlqMYgJ0QHj
+        OeengLS4ODkClZSkVpQEpRYXABWBBANSi4rz8xTyi4AmpWSWZaaUJuYArUbXrOQYEODj6ezoFwI0
+        ojgzLz0n1TkjP784MSknFcm0EA/XeIRKdGOAClw8g519/IM9/dzjHV1cglyDg4HmJaakFKUWFyPM
+        qYYJGQK1GBoZKwQr+CZm5iGUGgHFgbzkzBJQEnDOyExOTM8HCeSX5pUUgcRC8zKBiUAhGBjHqaDQ
+        B0U20GQlTx8gpyqzAOoeoOEmpkq16C4FygT4O8cHePj7uSqhhxlIk66JqZmuuYWlAbonQfIB/vEu
+        rsHO6BqtlPz0HdHVg4SdPUMigToCHINCfF39QuL9g+Id3V39nCOBJqCHNcIwoAagUrf4AB9HPz9w
+        gPq5AE0Jc/XxDwAZo1QbC7ILNdn4lwOTTXFGZgEwuktSgUFZAgocmHvQkw3YdX6OIaFBrvFIMQdy
+        aKQCBCjhc2KAa1Cwvx/IP8H+Pq7xAUH+AUGeriH+QVjd5pmXnJ+bqu+cn1uQmleMnqSxui3I1ccx
+        xNPfL9jDM0AJn0siXYPRQx4kjOypIP8wTxfXeE8/Z39fV7yG+fmjmwUSRXYLMB5CHMFJDeilgpzU
+        CoTuaKAviqA8qE5XH1dnYOkDjEw3T2dPR5A2UGGB0FOtlJZZVFwCDSeX1KLUbKCanES4kGsKsHwE
+        p2I0oyG+iQcSAa5+wWD3AXWiJUtPhaLEbGBmycgsVshJTSxLLdYDRhA4htD86ObpB8zYQCcCgynE
+        FZh90YsD1IBCD3WoKeD0DvRsvJ+jryuoACAUSEARJZBaJfwBE5SanpmXqIQSMqDUVAJMSOiBA5IL
+        AiZKJXT3I5kOcSh67CihmwRUCAsNkGfQA1ehKDWvRCG3UiGxILGoJBfESSvKz1XISC2CBDM4oFGz
+        QlBqCbC8A0ZJAFBLZip6HkUPUWDaAyY3P6AjgfneM8TTNTjeNcITPXLQPIeeitFMCgDnXUIGgbSg
+        xzK6SaDiAuQkqIlK6PENVIwe30Dt6PGdB1KHGt+uRZnJQCVIsV2WmKcQlQgs2dAjHGImKO06ewY4
+        gqIT5jwlLOqcQoFFArBuIlRHgYVgdZQfeh2lRGodVQxiAMXBBQd6HYXuH5AMcpED1JJbmlOSiR5D
+        QHXRSj7+Tk6RoHiMxWKKm6sryIdo6VZFBT1kQKLANO7pCw6/AEdPF1zJ1zkVmGrTgB4GiYF8Bksa
+        6IkXbKazh6ePS3xwaECAfxB6SkPxB3qShep3Cw0CtjuCnH0cgzyBWRQSInjN8Yx3dgWmSbdIdONA
+        kh6GMElCRkBUoRsBlIRKGRIyAaIM3QSQJFTKlJAJEGXoJoAkoVJGBEwI9XN0AlbNIf6EzAJKGQEL
+        A2BrwxO9CgGqyMksS1UoyU9PLclILdJRSMlMVUjMyc9LRTcNpBZqmrESfpdBlaGbAJKESpkQMAHd
+        b3jNQvcbwqAYpdz84hKFnMzs1JxKoCcVikuTk1NTU2KU0M0DqYaaZ6aE321QZegmgCQ9jGCS+I1A
+        9x4Ow9A9hjAiJT9PvUShBNhfSlHIz1PIRY8tiAHGMNPxuwamCt0IJXiQmBMwwcMxDNh7gDU0QW1O
+        oNd8Hb1d0c0EKYeZieQ7QrUKUAS9VgHJgIpy5FolKDEjVwmlVnEFdsdKU3PQi2CwgeAmArDOBbck
+        0MLXN7EyvwhcRurgcr+FEnqYILmLUJjgMpNQmGDzQpArsGL0BDYflPCHDnrjEyjkit74hBns7ukW
+        Eg/qCQV5BoAKZaA2tBAKAXXH0XUCxcMcfUJdgS2ueJAR6NqAdZOJgQF6uEJ1Boc4hoQGx4MbqqDW
+        GrChCqyyQkKh9qOHNcJMz+B4P/8QYFhj14pulRI03OCtQnxmo9dbEP3BPsDIDULPV6g6gfnK0Q8c
+        4fEhoL61kz8wPQB1wSs6JfT6F6TLDdiqQK+D4baj18Fgt7i5urgGOfr4RMa7hfq5uIJGQnA7CuQd
+        dFuBwo7J2Xn55TmpKempoFYuITuVHJ29/fzDfVxd3F1B/VVQlY3egoFZGQ0MCCTlwP6MXzBQixLY
+        FejGItSBjTUiZC5CPZK5YJPR/FcA7JemZFYoOCqh+wzGgzrBzdHX08cTmILQGmjoQQp3B3obGq9B
+        8eidS4Q56LlbCZpKIdrDgI1w9AIwD6QNNYs75qF3osISc1LzkjMT0XM52AKE2SHQYhDdm1D1SlDH
+        OPu4BnkroZukBDMJOGAALOPQ8xVW44KBTVpX0GBCLHp8gWTh8eWkhB5fMB7UYscAp0D0xhqqTejx
+        g6QR1I4hFBFAEWAf0cUTOMIQCoxN9EjIA2lBjQTIYKASSjTARwZBHsbuGFCTiJBjgCJKTqGePi6g
+        YQ9H9B4OQls1TAjUwwGOdymgj8Kh93Ayye3hAPs3ZuYQb4E9hiMeQSNqMD+jxyPYHMeAgAiQIvR4
+        hHtJCVzEwwYogUWqY0g8sOB3BGX8kCBHZ/ShKbgTUlIyQVzogKsSujtgPKg7gIN3oNIUaKovqAgC
+        KkerwPzy81KVamNrY2sBAQAA//+mQUiJ4RYAAA==
+    headers:
+      Connection:
+      - Keep-Alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '2137'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 31 Mar 2021 21:04:36 GMT
+      Keep-Alive:
+      - timeout=5, max=99
+      Server:
+      - CA-API-Gateway/9.0
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 201
+      message: Created
+version: 1

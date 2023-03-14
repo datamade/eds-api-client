@@ -1,0 +1,219 @@
+interactions:
+- request:
+    body: client_secret=fakesecret&grant_type=password&scope=write&username=dpdbiglots&password=fakepassword&client_id=fakebiglots
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '124'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.13.0
+    method: POST
+    uri: https://apiqa.chicago.gov/edsapi/oauth/token
+  response:
+    body:
+      string: '{"access_token":"b515c52a-e0a3-45f2-90ad-391b6cf07b43","token_type":"bearer","expires_in":3599,"scope":"write"}'
+    headers:
+      Cache-Control:
+      - no-store
+      Connection:
+      - Keep-Alive
+      Content-Length:
+      - '111'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 31 Mar 2021 19:49:58 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Pragma:
+      - no-cache
+      Server:
+      - CA-API-Gateway/9.0
+      Set-Cookie:
+      - BIGipServerwebapps1qa.chicago.gov_https.app~webapps1qa.chicago.gov_https_pool=941905930.21308.0000;
+        path=/; Httponly; Secure
+      - BIGipServerrevproxy.chicago.gov_https.app~revproxy.chicago.gov_https_pool=403857418.52008.0000;
+        path=/; Httponly; Secure
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"company": {}, "user": {}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer b515c52a-e0a3-45f2-90ad-391b6cf07b43
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '27'
+      Content-Type:
+      - application/json
+      Cookie:
+      - BIGipServerwebapps1qa.chicago.gov_https.app~webapps1qa.chicago.gov_https_pool=941905930.21308.0000;
+        BIGipServerrevproxy.chicago.gov_https.app~revproxy.chicago.gov_https_pool=403857418.52008.0000
+      User-Agent:
+      - python-requests/2.13.0
+    method: POST
+    uri: https://apiqa.chicago.gov/edsapi/rest/user/
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAEA6pWKi5JLCktVrJSCkvMyUxJLMnMz1NILSrKLypWyMxTqMwvLVIoSi0sTS0uUdJR
+        gkgoWUVXK2WnVgI1lRanFukVJBYXl+cXpQAVlCXmlKYCxSPzSxVyS4tLFIpLCwpyKhUSFWCK9JRq
+        dVB0J+YVl6cWBYJsANqNz4w8BYhahZJ8hZKMVIXi1OSi1BKFQqhWdJP1SjJLclLxG5iflpaZnJmY
+        owBWi26CXkFGfh4+E8DBU5KakwpWqJBXmpsE1IVuCojwRA8dZGMSFUBKFDxd0LXqQbyIHjhKyEYA
+        bU8uARoBUYoeGgij0jKLikv8EnPR/QMxBeIQsH/AChXygCrRzdDLSSTOCJA67Cak5iZm5uDRDowT
+        sBKFxJSUotTiYnQD9JLz84AOzHUFKcJmDlQe4g5CRoGVBkBTJiHT0JMw2KDk/NyCxLxKPSiNHjgw
+        c2C+UyhLzUvJL0IPG7gxUKcaEmMGVC02Y5LzS/NKiiqJMQWqFKspmSXEGQFUh01/VWaBc34Kenhg
+        NaIqs0AhOT8lVU+pNrYWEAAA//+DfYEUlQQAAA==
+    headers:
+      Connection:
+      - Keep-Alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '427'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 31 Mar 2021 19:49:58 GMT
+      Server:
+      - CA-API-Gateway/9.0
+      Vary:
+      - Accept-Encoding
+      X-Cnection:
+      - close
+      - close
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: '{"company": {}, "user": {}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer b515c52a-e0a3-45f2-90ad-391b6cf07b43
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '27'
+      Content-Type:
+      - application/json
+      Cookie:
+      - BIGipServerwebapps1qa.chicago.gov_https.app~webapps1qa.chicago.gov_https_pool=941905930.21308.0000;
+        BIGipServerrevproxy.chicago.gov_https.app~revproxy.chicago.gov_https_pool=403857418.52008.0000
+      User-Agent:
+      - python-requests/2.13.0
+    method: POST
+    uri: https://apiqa.chicago.gov/edsapi/rest/user/
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAEA6pWKi5JLCktVrJSCkvMyUxJLMnMz1NILSrKLypWyMxTqMwvLVIoSi0sTS0uUdJR
+        gkgoWUVXK2WnVgI1lRanFukl5hWXpxYFgtQAdQOVlSXmlKYCZSPzSxVyS4tLFIpLCwpyKhUS8xQg
+        ahVK8hVKMlIVilOTi1JLFAqhWvWUanVQTC5ILC4uzy9KwWemAkwRum49EOGJXy9IiYKnC7pWvYKM
+        /LxUPDrB4VKSmpMKVqiQV5qbBNSFbkpJZkkOPlOA4ZGflpaZnJmYowBWi26CHiSA0INWCdkooCOS
+        S4BegShFD0uEUWmZRcUlfom56A6CmAJxENhbYIUKeUCV6Gbo5SQSZwRIHXYTUnMTM3PwaAcGCViJ
+        QmJKSlFqcTG6AXrJ+XlAB+a6ghRhMwcqD3EHIaPASgOg6YeQaegJDWxQcn5uQWJepR6URg8cmDkw
+        3ymUpeal5Behhw3cGKhTDYkxA6oWmzHJ+aV5JUWVxJgCVYrVlMwS4owAqsOmvyqzwDk/BT08sBpR
+        lVmgkJyfkqqnVBtbCwgAAP//8PX+DZUEAAA=
+    headers:
+      Connection:
+      - Keep-Alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '425'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 31 Mar 2021 19:50:09 GMT
+      Server:
+      - CA-API-Gateway/9.0
+      Vary:
+      - Accept-Encoding
+      X-Cnection:
+      - close
+      - close
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: '{"company": {}, "user": {}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer b515c52a-e0a3-45f2-90ad-391b6cf07b43
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '27'
+      Content-Type:
+      - application/json
+      Cookie:
+      - BIGipServerwebapps1qa.chicago.gov_https.app~webapps1qa.chicago.gov_https_pool=941905930.21308.0000;
+        BIGipServerrevproxy.chicago.gov_https.app~revproxy.chicago.gov_https_pool=403857418.52008.0000
+      User-Agent:
+      - python-requests/2.13.0
+    method: POST
+    uri: https://apiqa.chicago.gov/edsapi/rest/user/
+  response:
+    body:
+      string: !!binary |
+        H4sIAAAAAAAEA6pWKi5JLCktVrJSCkvMyUxJLMnMz1NILSrKLypWyMxTqMwvLVIoSi0sTS0uUdJR
+        gkgoWUVXK2WnVgI1lRanFumBCM8UoHRZYk5pKlA0Mr9UIbe0uEShuLSgIKdSIVEBpETB00VPqVYH
+        RWtBYnFxeX4Rfs0wRei69RLzistTiwJBjgM6G58ZeQoQtQol+QolGakKxanJRaklCoVQregm6xVk
+        5Oel4jEQHC4lqTmpYIUKeaW5SUBd6KaUZJbk4DMF6Kz8tLTM5MzEHAWwWnQT9CDuRPehErJRQEck
+        lwBDCaIU3UsIo9Iyi4pL/BJz0R0EMQXiILC3wAoV8oAq0c3Qy0kkzgiQOuwmpOYmZubg0Q4MErAS
+        hcSUlKLU4mJ0A/SS8/OADsx1BSnCZg5UHuIOQkaBlQZAkxch09DTIdig5PzcgsS8Sj0ojR44MHNg
+        vlMoS81LyS9CDxu4MVCnGhJjBlQtNmOS80vzSooqiTEFqhSrKZklxBkBVIdNf1VmgXN+Cnp4YDWi
+        KrNAITk/JVVPqTa2FhAAAP//ggChL5UEAAA=
+    headers:
+      Connection:
+      - Keep-Alive
+      Content-Encoding:
+      - gzip
+      Content-Length:
+      - '425'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 31 Mar 2021 19:50:30 GMT
+      Server:
+      - CA-API-Gateway/9.0
+      Vary:
+      - Accept-Encoding
+      X-Cnection:
+      - close
+      - close
+    status:
+      code: 400
+      message: Bad Request
+version: 1

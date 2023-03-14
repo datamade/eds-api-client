@@ -1,0 +1,384 @@
+interactions:
+- request:
+    body: username=fakeuser&client_secret=fakesecret&scope=write&password=Fakepassword1&grant_type=password&client_id=fakebiglots
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '124'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.13.0
+    method: POST
+    uri: https://apiqa.chicago.gov/edsapi/oauth/token
+  response:
+    body:
+      string: '{"access_token":"3552326a-f725-4328-a45a-d7b53f5483a0","token_type":"bearer","expires_in":3594,"scope":"write"}'
+    headers:
+      Cache-Control:
+      - no-store
+      Connection:
+      - Keep-Alive
+      Content-Length:
+      - '111'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Wed, 31 Mar 2021 18:44:18 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Pragma:
+      - no-cache
+      Server:
+      - CA-API-Gateway/9.0
+      Set-Cookie:
+      - BIGipServerwebapps1qa.chicago.gov_https.app~webapps1qa.chicago.gov_https_pool=958683146.21308.0000;
+        path=/; Httponly; Secure
+      - BIGipServerrevproxy.chicago.gov_https.app~revproxy.chicago.gov_https_pool=387080202.52008.0000;
+        path=/; Httponly; Secure
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"edsQuestions": [{"textResponse": "Big Lot Test", "questionCode": "DBA"},
+      {"questionCode": "DISCLOSING_ADDRESS", "addressResponse": {"address2": "", "city":
+      "Chicago", "country": "United States", "address1": "333 N. LSD", "state": "IL",
+      "zipCode": "60601"}}, {"textResponse": "312-555-1444", "questionCode": "POC_PHONE"},
+      {"textResponse": "", "questionCode": "POC_FAX"}, {"textResponse": "Test description",
+      "questionCode": "PO_DESC"}, {"singleChoosableResponse": "DEPT_OF_PLANNING_AND_DEVELOPMENT",
+      "questionCode": "CITY_DEPARTMENT_OR_AGENCY"}, {"textResponse": "2817272", "questionCode":
+      "SPEC_NUM"}, {"textResponse": "", "questionCode": "PO_NUM"}, {"textResponse":
+      "", "questionCode": "USER_DEPARTMENT_PROJECT_NUMBER"}, {"singleChoosableResponse":
+      "PERSON_OR_SOLE_PROPRIETOR", "questionCode": "NATURE_DISCLOSING_PARTY       "},
+      {"singleChoosableResponse": "YES", "questionCode": "RELATIONSHIP"}, {"singleChoosableResponse":
+      "NO", "questionCode": "DISCLOSING_PROVIDE_INCOME"}, {"complexResponse": [[{"nameResponse":
+      {"firstName": "Bernard", "lastName": "Stone"}, "responseCode": null}, {"textResponse":
+      "Golf club membership", "responseCode": null}]], "questionCode": "RELATIONSHIP_DETAIL"},
+      {"singleChoosableResponse": "YES", "questionCode": "FINANTIAL_INTEREST"}, {"complexResponse":
+      [[{"nameResponse": {"suffix": "Jr", "firstName": "Jesse", "lastName": "Jackson"},
+      "responseCode": null}, {"singleChoosableResponse": "CITY_ELECTED_OFFICIAL",
+      "responseCode": null}, {"textResponse": "Stock in ABC Corp.", "responseCode":
+      null}]], "questionCode": "CITY_OFF_NAMES"}, {"singleChoosableResponse": "NO",
+      "questionCode": "RETAINED_ENTITIES_EXIST"}, {"singleChoosableResponse": "NO",
+      "questionCode": "RETAINED_PERSONS_EXIST"}, {"singleChoosableResponse": "NO",
+      "questionCode": "CHILD_SUPPORT"}, {"singleChoosableResponse": "I_CERTIFY", "questionCode":
+      "FURTHERCLARIFICATIONS"}, {"singleChoosableResponse": "I_CERTIFY", "questionCode":
+      "H1CERTIFY"}, {"singleChoosableResponse": "I_CERTIFY", "questionCode": "CERTIFY1"},
+      {"singleChoosableResponse": "I_CERTIFY", "questionCode": "CERTIFY5"}, {"singleChoosableResponse":
+      "I_CERTIFY", "questionCode": "CERTIFY2"}, {"singleChoosableResponse": "I_CERTIFY",
+      "questionCode": "CERTIFY4"}, {"singleChoosableResponse": "I_CERTIFY", "questionCode":
+      "CERTIFY6"}, {"singleChoosableResponse": "I_UNABLE_TO_CERTIFY", "questionCode":
+      "H2CERTIFY"}, {"textResponse": "Unable to certify.", "questionCode": "H2_EXPLAIN"},
+      {"singleChoosableResponse": "I_CERTIFY", "questionCode": "H3CERTIFY"}, {"singleChoosableResponse":
+      "NONE", "questionCode": "CERTIFY7"}, {"complexResponse": [[{"nameResponse":
+      {"firstName": "Gary", "lastName": "Grifter"}, "responseCode": null}, {"textResponse":
+      "Cubs World Series Tickets", "responseCode": null}, {"textResponse": "$200",
+      "responseCode": null}]], "questionCode": "CERTIFY8_EXPLAIN"}, {"singleChoosableResponse":
+      "IS_NOT_A_FINANCIAL_INSTITUTION", "questionCode": "STATUS_FINANCIAL_INSTITUTION"},
+      {"singleChoosableResponse": "NO", "questionCode": "CITY_OFFICIAL"}, {"singleChoosableResponse":
+      "I_CAN_MAKE_THE_ABOVE_VERIFICATION", "questionCode": "SLAVERY"}, {"singleChoosableResponse":
+      "NO", "questionCode": "FEDERALLY_FUNDED"}, {"questionCode": "ACKNOWLEDGEMENTS",
+      "multiChoosableResponse": ["I_ACKNOWLEDGE_CONSENT"]}, {"questionCode": "ACKNOWLEDGEMENTS2",
+      "multiChoosableResponse": ["I_ACKNOWLEDGE_CONSENT"]}, {"singleChoosableResponse":
+      "YES", "questionCode": "FAMILIAL_RELATIONSHIP"}, {"complexResponse": [[{"nameResponse":
+      {"suffix": "Sr", "firstName": "Jesse", "salutation": "Mr.", "lastName": "Jackson"},
+      "responseCode": null}, {"textResponse": "Lobbyist", "responseCode": null}, {"textResponse":
+      "Jackson & Associates", "responseCode": null}, {"nameResponse": {"firstName":
+      "Sandy", "salutation": "Ms.", "lastName": "Jackson"}, "responseCode": null},
+      {"singleChoosableResponse": "ALDERMAN", "responseCode": null}, {"singleChoosableResponse":
+      "PARENT", "responseCode": null}], [{"nameResponse": {}, "responseCode": null},
+      {"responseCode": null}, {"textResponse": "Richards & Associate", "responseCode":
+      null}, {"nameResponse": {"firstName": "Patrick", "lastName": "O''Connor"}, "responseCode":
+      null}, {"singleChoosableResponse": "ALDERMAN", "responseCode": null}, {"singleChoosableResponse":
+      "SELF", "responseCode": null}]], "questionCode": "FAMILIAL_RELATIONSHIP_DETAIL"},
+      {"singleChoosableResponse": "YES", "questionCode": "APBQ1"}, {"complexResponse":
+      [[{"nameResponse": {"firstName": "Sam", "lastName": "Super"}, "responseCode":
+      null}, {"responseCode": null}, {"singleChoosableResponse": "OFFICER_DIRECTOR",
+      "responseCode": null}]], "questionCode": "APBQ3"}, {"complexResponse": [[{"addressResponse":
+      {"address1": "56 Slum Land", "zipCode": "60634", "city": "Chicago", "country":
+      "United States"}, "responseCode": null}]], "questionCode": "APBQ4"}, {"singleChoosableResponse":
+      "NO", "questionCode": "APPXC"}, {"textResponse": "012345678901", "questionCode":
+      "C1_CLARIFICATION_EXPLAIN"}, {"textResponse": "", "questionCode": "GENERAL_COMMENT"}]}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 3552326a-f725-4328-a45a-d7b53f5483a0
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '5015'
+      Content-Type:
+      - application/json
+      Cookie:
+      - BIGipServerwebapps1qa.chicago.gov_https.app~webapps1qa.chicago.gov_https_pool=958683146.21308.0000;
+        BIGipServerrevproxy.chicago.gov_https.app~revproxy.chicago.gov_https_pool=387080202.52008.0000
+      User-Agent:
+      - python-requests/2.13.0
+    method: POST
+    uri: https://apiqa.chicago.gov/edsapi/rest/eds/
+  response:
+    body:
+      string: '{"timestamp":1617216259458,"status":"BAD_REQUEST","errors":[{"key":"RELATIONSHIP_DETAIL","value":"Income
+        or Compensation to City Official Detail is required."},{"key":"CITY_OFF_NAMES","value":"City
+        Official Names is required."},{"key":"CERTIFY3","value":"Certification V.B.6
+        bid-rigging and bid-rotating is required."},{"key":"CERTIFY8","value":"Certification
+        V.B.12 gifts to City employees in past 12 months is required."},{"key":"FAMILIAL_RELATIONSHIP_DETAIL","value":"Familial
+        Relationship Detail is required."},{"key":"APBQ3","value":"Identify below
+        the name of each person or legal entity identified as a building code scofflaw
+        or problem landlord is required."},{"key":"APBQ4","value":"Identify below
+        the address of each building to which the pertinent code violations apply
+        is required."}]}'
+    headers:
+      Content-Length:
+      - '797'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 31 Mar 2021 18:44:18 GMT
+      Server:
+      - CA-API-Gateway/9.0
+      Vary:
+      - Accept-Encoding
+      X-Cnection:
+      - close
+      - close
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: '{"edsQuestions": [{"textResponse": "Big Lot Test", "questionCode": "DBA"},
+      {"questionCode": "DISCLOSING_ADDRESS", "addressResponse": {"address2": "", "city":
+      "Chicago", "country": "United States", "address1": "333 N. LSD", "state": "IL",
+      "zipCode": "60601"}}, {"textResponse": "312-555-1444", "questionCode": "POC_PHONE"},
+      {"textResponse": "", "questionCode": "POC_FAX"}, {"textResponse": "Test description",
+      "questionCode": "PO_DESC"}, {"singleChoosableResponse": "DEPT_OF_PLANNING_AND_DEVELOPMENT",
+      "questionCode": "CITY_DEPARTMENT_OR_AGENCY"}, {"textResponse": "2817272", "questionCode":
+      "SPEC_NUM"}, {"textResponse": "", "questionCode": "PO_NUM"}, {"textResponse":
+      "", "questionCode": "USER_DEPARTMENT_PROJECT_NUMBER"}, {"singleChoosableResponse":
+      "PERSON_OR_SOLE_PROPRIETOR", "questionCode": "NATURE_DISCLOSING_PARTY       "},
+      {"singleChoosableResponse": "YES", "questionCode": "RELATIONSHIP"}, {"singleChoosableResponse":
+      "NO", "questionCode": "DISCLOSING_PROVIDE_INCOME"}, {"complexResponse": [[{"nameResponse":
+      {"firstName": "Bernard", "lastName": "Stone"}, "responseCode": null}, {"textResponse":
+      "Golf club membership", "responseCode": null}]], "questionCode": "RELATIONSHIP_DETAIL"},
+      {"singleChoosableResponse": "YES", "questionCode": "FINANTIAL_INTEREST"}, {"complexResponse":
+      [[{"nameResponse": {"suffix": "Jr", "firstName": "Jesse", "lastName": "Jackson"},
+      "responseCode": null}, {"singleChoosableResponse": "CITY_ELECTED_OFFICIAL",
+      "responseCode": null}, {"textResponse": "Stock in ABC Corp.", "responseCode":
+      null}]], "questionCode": "CITY_OFF_NAMES"}, {"singleChoosableResponse": "NO",
+      "questionCode": "RETAINED_ENTITIES_EXIST"}, {"singleChoosableResponse": "NO",
+      "questionCode": "RETAINED_PERSONS_EXIST"}, {"singleChoosableResponse": "NO",
+      "questionCode": "CHILD_SUPPORT"}, {"singleChoosableResponse": "I_CERTIFY", "questionCode":
+      "FURTHERCLARIFICATIONS"}, {"singleChoosableResponse": "I_CERTIFY", "questionCode":
+      "H1CERTIFY"}, {"singleChoosableResponse": "I_CERTIFY", "questionCode": "CERTIFY1"},
+      {"singleChoosableResponse": "I_CERTIFY", "questionCode": "CERTIFY5"}, {"singleChoosableResponse":
+      "I_CERTIFY", "questionCode": "CERTIFY2"}, {"singleChoosableResponse": "I_CERTIFY",
+      "questionCode": "CERTIFY4"}, {"singleChoosableResponse": "I_CERTIFY", "questionCode":
+      "CERTIFY6"}, {"singleChoosableResponse": "I_UNABLE_TO_CERTIFY", "questionCode":
+      "H2CERTIFY"}, {"textResponse": "Unable to certify.", "questionCode": "H2_EXPLAIN"},
+      {"singleChoosableResponse": "I_CERTIFY", "questionCode": "H3CERTIFY"}, {"singleChoosableResponse":
+      "NONE", "questionCode": "CERTIFY7"}, {"complexResponse": [[{"nameResponse":
+      {"firstName": "Gary", "lastName": "Grifter"}, "responseCode": null}, {"textResponse":
+      "Cubs World Series Tickets", "responseCode": null}, {"textResponse": "$200",
+      "responseCode": null}]], "questionCode": "CERTIFY8_EXPLAIN"}, {"singleChoosableResponse":
+      "IS_NOT_A_FINANCIAL_INSTITUTION", "questionCode": "STATUS_FINANCIAL_INSTITUTION"},
+      {"singleChoosableResponse": "NO", "questionCode": "CITY_OFFICIAL"}, {"singleChoosableResponse":
+      "I_CAN_MAKE_THE_ABOVE_VERIFICATION", "questionCode": "SLAVERY"}, {"singleChoosableResponse":
+      "NO", "questionCode": "FEDERALLY_FUNDED"}, {"questionCode": "ACKNOWLEDGEMENTS",
+      "multiChoosableResponse": ["I_ACKNOWLEDGE_CONSENT"]}, {"questionCode": "ACKNOWLEDGEMENTS2",
+      "multiChoosableResponse": ["I_ACKNOWLEDGE_CONSENT"]}, {"singleChoosableResponse":
+      "YES", "questionCode": "FAMILIAL_RELATIONSHIP"}, {"complexResponse": [[{"nameResponse":
+      {"suffix": "Sr", "firstName": "Jesse", "salutation": "Mr.", "lastName": "Jackson"},
+      "responseCode": null}, {"textResponse": "Lobbyist", "responseCode": null}, {"textResponse":
+      "Jackson & Associates", "responseCode": null}, {"nameResponse": {"firstName":
+      "Sandy", "salutation": "Ms.", "lastName": "Jackson"}, "responseCode": null},
+      {"singleChoosableResponse": "ALDERMAN", "responseCode": null}, {"singleChoosableResponse":
+      "PARENT", "responseCode": null}], [{"nameResponse": {}, "responseCode": null},
+      {"responseCode": null}, {"textResponse": "Richards & Associate", "responseCode":
+      null}, {"nameResponse": {"firstName": "Patrick", "lastName": "O''Connor"}, "responseCode":
+      null}, {"singleChoosableResponse": "ALDERMAN", "responseCode": null}, {"singleChoosableResponse":
+      "SELF", "responseCode": null}]], "questionCode": "FAMILIAL_RELATIONSHIP_DETAIL"},
+      {"singleChoosableResponse": "YES", "questionCode": "APBQ1"}, {"complexResponse":
+      [[{"nameResponse": {"firstName": "Sam", "lastName": "Super"}, "responseCode":
+      null}, {"responseCode": null}, {"singleChoosableResponse": "OFFICER_DIRECTOR",
+      "responseCode": null}]], "questionCode": "APBQ3"}, {"complexResponse": [[{"addressResponse":
+      {"address1": "56 Slum Land", "zipCode": "60634", "city": "Chicago", "country":
+      "United States"}, "responseCode": null}]], "questionCode": "APBQ4"}, {"singleChoosableResponse":
+      "NO", "questionCode": "APPXC"}, {"textResponse": "012345678901", "questionCode":
+      "C1_CLARIFICATION_EXPLAIN"}, {"textResponse": "", "questionCode": "GENERAL_COMMENT"}]}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 3552326a-f725-4328-a45a-d7b53f5483a0
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '5015'
+      Content-Type:
+      - application/json
+      Cookie:
+      - BIGipServerwebapps1qa.chicago.gov_https.app~webapps1qa.chicago.gov_https_pool=958683146.21308.0000;
+        BIGipServerrevproxy.chicago.gov_https.app~revproxy.chicago.gov_https_pool=387080202.52008.0000
+      User-Agent:
+      - python-requests/2.13.0
+    method: POST
+    uri: https://apiqa.chicago.gov/edsapi/rest/eds/
+  response:
+    body:
+      string: '{"timestamp":1617216270827,"status":"BAD_REQUEST","errors":[{"key":"RELATIONSHIP_DETAIL","value":"Income
+        or Compensation to City Official Detail is required."},{"key":"CITY_OFF_NAMES","value":"City
+        Official Names is required."},{"key":"CERTIFY3","value":"Certification V.B.6
+        bid-rigging and bid-rotating is required."},{"key":"CERTIFY8","value":"Certification
+        V.B.12 gifts to City employees in past 12 months is required."},{"key":"FAMILIAL_RELATIONSHIP_DETAIL","value":"Familial
+        Relationship Detail is required."},{"key":"APBQ3","value":"Identify below
+        the name of each person or legal entity identified as a building code scofflaw
+        or problem landlord is required."},{"key":"APBQ4","value":"Identify below
+        the address of each building to which the pertinent code violations apply
+        is required."}]}'
+    headers:
+      Content-Length:
+      - '797'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 31 Mar 2021 18:44:30 GMT
+      Server:
+      - CA-API-Gateway/9.0
+      Vary:
+      - Accept-Encoding
+      X-Cnection:
+      - close
+      - close
+    status:
+      code: 400
+      message: Bad Request
+- request:
+    body: '{"edsQuestions": [{"textResponse": "Big Lot Test", "questionCode": "DBA"},
+      {"questionCode": "DISCLOSING_ADDRESS", "addressResponse": {"address2": "", "city":
+      "Chicago", "country": "United States", "address1": "333 N. LSD", "state": "IL",
+      "zipCode": "60601"}}, {"textResponse": "312-555-1444", "questionCode": "POC_PHONE"},
+      {"textResponse": "", "questionCode": "POC_FAX"}, {"textResponse": "Test description",
+      "questionCode": "PO_DESC"}, {"singleChoosableResponse": "DEPT_OF_PLANNING_AND_DEVELOPMENT",
+      "questionCode": "CITY_DEPARTMENT_OR_AGENCY"}, {"textResponse": "2817272", "questionCode":
+      "SPEC_NUM"}, {"textResponse": "", "questionCode": "PO_NUM"}, {"textResponse":
+      "", "questionCode": "USER_DEPARTMENT_PROJECT_NUMBER"}, {"singleChoosableResponse":
+      "PERSON_OR_SOLE_PROPRIETOR", "questionCode": "NATURE_DISCLOSING_PARTY       "},
+      {"singleChoosableResponse": "YES", "questionCode": "RELATIONSHIP"}, {"singleChoosableResponse":
+      "NO", "questionCode": "DISCLOSING_PROVIDE_INCOME"}, {"complexResponse": [[{"nameResponse":
+      {"firstName": "Bernard", "lastName": "Stone"}, "responseCode": null}, {"textResponse":
+      "Golf club membership", "responseCode": null}]], "questionCode": "RELATIONSHIP_DETAIL"},
+      {"singleChoosableResponse": "YES", "questionCode": "FINANTIAL_INTEREST"}, {"complexResponse":
+      [[{"nameResponse": {"suffix": "Jr", "firstName": "Jesse", "lastName": "Jackson"},
+      "responseCode": null}, {"singleChoosableResponse": "CITY_ELECTED_OFFICIAL",
+      "responseCode": null}, {"textResponse": "Stock in ABC Corp.", "responseCode":
+      null}]], "questionCode": "CITY_OFF_NAMES"}, {"singleChoosableResponse": "NO",
+      "questionCode": "RETAINED_ENTITIES_EXIST"}, {"singleChoosableResponse": "NO",
+      "questionCode": "RETAINED_PERSONS_EXIST"}, {"singleChoosableResponse": "NO",
+      "questionCode": "CHILD_SUPPORT"}, {"singleChoosableResponse": "I_CERTIFY", "questionCode":
+      "FURTHERCLARIFICATIONS"}, {"singleChoosableResponse": "I_CERTIFY", "questionCode":
+      "H1CERTIFY"}, {"singleChoosableResponse": "I_CERTIFY", "questionCode": "CERTIFY1"},
+      {"singleChoosableResponse": "I_CERTIFY", "questionCode": "CERTIFY5"}, {"singleChoosableResponse":
+      "I_CERTIFY", "questionCode": "CERTIFY2"}, {"singleChoosableResponse": "I_CERTIFY",
+      "questionCode": "CERTIFY4"}, {"singleChoosableResponse": "I_CERTIFY", "questionCode":
+      "CERTIFY6"}, {"singleChoosableResponse": "I_UNABLE_TO_CERTIFY", "questionCode":
+      "H2CERTIFY"}, {"textResponse": "Unable to certify.", "questionCode": "H2_EXPLAIN"},
+      {"singleChoosableResponse": "I_CERTIFY", "questionCode": "H3CERTIFY"}, {"singleChoosableResponse":
+      "NONE", "questionCode": "CERTIFY7"}, {"complexResponse": [[{"nameResponse":
+      {"firstName": "Gary", "lastName": "Grifter"}, "responseCode": null}, {"textResponse":
+      "Cubs World Series Tickets", "responseCode": null}, {"textResponse": "$200",
+      "responseCode": null}]], "questionCode": "CERTIFY8_EXPLAIN"}, {"singleChoosableResponse":
+      "IS_NOT_A_FINANCIAL_INSTITUTION", "questionCode": "STATUS_FINANCIAL_INSTITUTION"},
+      {"singleChoosableResponse": "NO", "questionCode": "CITY_OFFICIAL"}, {"singleChoosableResponse":
+      "I_CAN_MAKE_THE_ABOVE_VERIFICATION", "questionCode": "SLAVERY"}, {"singleChoosableResponse":
+      "NO", "questionCode": "FEDERALLY_FUNDED"}, {"questionCode": "ACKNOWLEDGEMENTS",
+      "multiChoosableResponse": ["I_ACKNOWLEDGE_CONSENT"]}, {"questionCode": "ACKNOWLEDGEMENTS2",
+      "multiChoosableResponse": ["I_ACKNOWLEDGE_CONSENT"]}, {"singleChoosableResponse":
+      "YES", "questionCode": "FAMILIAL_RELATIONSHIP"}, {"complexResponse": [[{"nameResponse":
+      {"suffix": "Sr", "firstName": "Jesse", "salutation": "Mr.", "lastName": "Jackson"},
+      "responseCode": null}, {"textResponse": "Lobbyist", "responseCode": null}, {"textResponse":
+      "Jackson & Associates", "responseCode": null}, {"nameResponse": {"firstName":
+      "Sandy", "salutation": "Ms.", "lastName": "Jackson"}, "responseCode": null},
+      {"singleChoosableResponse": "ALDERMAN", "responseCode": null}, {"singleChoosableResponse":
+      "PARENT", "responseCode": null}], [{"nameResponse": {}, "responseCode": null},
+      {"responseCode": null}, {"textResponse": "Richards & Associate", "responseCode":
+      null}, {"nameResponse": {"firstName": "Patrick", "lastName": "O''Connor"}, "responseCode":
+      null}, {"singleChoosableResponse": "ALDERMAN", "responseCode": null}, {"singleChoosableResponse":
+      "SELF", "responseCode": null}]], "questionCode": "FAMILIAL_RELATIONSHIP_DETAIL"},
+      {"singleChoosableResponse": "YES", "questionCode": "APBQ1"}, {"complexResponse":
+      [[{"nameResponse": {"firstName": "Sam", "lastName": "Super"}, "responseCode":
+      null}, {"responseCode": null}, {"singleChoosableResponse": "OFFICER_DIRECTOR",
+      "responseCode": null}]], "questionCode": "APBQ3"}, {"complexResponse": [[{"addressResponse":
+      {"address1": "56 Slum Land", "zipCode": "60634", "city": "Chicago", "country":
+      "United States"}, "responseCode": null}]], "questionCode": "APBQ4"}, {"singleChoosableResponse":
+      "NO", "questionCode": "APPXC"}, {"textResponse": "012345678901", "questionCode":
+      "C1_CLARIFICATION_EXPLAIN"}, {"textResponse": "", "questionCode": "GENERAL_COMMENT"}]}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 3552326a-f725-4328-a45a-d7b53f5483a0
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '5015'
+      Content-Type:
+      - application/json
+      Cookie:
+      - BIGipServerwebapps1qa.chicago.gov_https.app~webapps1qa.chicago.gov_https_pool=958683146.21308.0000;
+        BIGipServerrevproxy.chicago.gov_https.app~revproxy.chicago.gov_https_pool=387080202.52008.0000
+      User-Agent:
+      - python-requests/2.13.0
+    method: POST
+    uri: https://apiqa.chicago.gov/edsapi/rest/eds/
+  response:
+    body:
+      string: '{"timestamp":1617216291613,"status":"BAD_REQUEST","errors":[{"key":"RELATIONSHIP_DETAIL","value":"Income
+        or Compensation to City Official Detail is required."},{"key":"CITY_OFF_NAMES","value":"City
+        Official Names is required."},{"key":"CERTIFY3","value":"Certification V.B.6
+        bid-rigging and bid-rotating is required."},{"key":"CERTIFY8","value":"Certification
+        V.B.12 gifts to City employees in past 12 months is required."},{"key":"FAMILIAL_RELATIONSHIP_DETAIL","value":"Familial
+        Relationship Detail is required."},{"key":"APBQ3","value":"Identify below
+        the name of each person or legal entity identified as a building code scofflaw
+        or problem landlord is required."},{"key":"APBQ4","value":"Identify below
+        the address of each building to which the pertinent code violations apply
+        is required."}]}'
+    headers:
+      Content-Length:
+      - '797'
+      Content-Type:
+      - application/json
+      Date:
+      - Wed, 31 Mar 2021 18:44:51 GMT
+      Server:
+      - CA-API-Gateway/9.0
+      Vary:
+      - Accept-Encoding
+      X-Cnection:
+      - close
+      - close
+    status:
+      code: 400
+      message: Bad Request
+version: 1
