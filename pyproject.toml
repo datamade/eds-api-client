@@ -28,5 +28,5 @@ classifiers = [
 [tool.pytest.ini_options]
 env = [
     "D:HOME=~/tmp",
-    "D:RUN_ENV=test",
+    "D:RUN_ENV=testing",
 ]
