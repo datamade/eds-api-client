@@ -8,9 +8,6 @@ version = "0.0.1"
 dependencies = [
     "lxml==4.9.2",
     "scrapelib==2.1.0",
-    "pytz==2018.9",
-    "pytest",
-    "vcrpy",
 ]
 authors = [
     { name="DataMade", email="info@datamade.us"}
