@@ -29,4 +29,5 @@ classifiers = [
 env = [
     "D:HOME=~/tmp",
     "D:RUN_ENV=testing",
+    "D:TEST_VENDOR_USERNAME={TEST_VENDOR_USERNAME}"
 ]
