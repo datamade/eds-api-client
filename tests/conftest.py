@@ -1,21 +1,20 @@
 import json
 import pytest
-# TODO: implement functionality that uses these imports
-# from app import app
-from tests.configs import settings as env # replace with env vars
+import os
+
 from tests.dummy_data import SESSION_DATA
 from tests.utils import unique_applicant
-from eds_api_client.api_client import EDSAPIClient
-from eds_api_client.web_client import EDSWebClient
+from src.api_client import EDSAPIClient
+from src.web_client import EDSWebClient
 
 @pytest.fixture
 def app_creds():
     return {
-        'client_id': env.EDS_CLIENT_ID,
-        'client_secret': env.EDS_CLIENT_SECRET,
-        'eds_domain': env.EDS_DOMAIN_NAME,
-        'username': env.EDS_CLIENT_USERNAME,
-        'password': env.EDS_CLIENT_PASSWORD
+        'client_id': os.environ['EDS_CLIENT_ID'],
+        'client_secret': os.environ['EDS_CLIENT_SECRET'],
+        'eds_domain': os.environ['EDS_DOMAIN_NAME'],
+        'username': os.environ['EDS_CLIENT_USERNAME'],
+        'password': os.environ['EDS_CLIENT_PASSWORD']
     }
 
 @pytest.fixture
@@ -26,12 +25,12 @@ def api_client(app_creds):
 
 @pytest.fixture
 def web_client():
-    return EDSWebClient(env.TEST_VENDOR_USERNAME, env.TEST_VENDOR_PASSWORD)
+    return EDSWebClient(os.environ['TEST_VENDOR_USERNAME'], os.environ['TEST_VENDOR_PASSWORD'])
 
 @pytest.fixture
 def user():
-    username = env.TEST_VENDOR_USERNAME
-    password = env.TEST_VENDOR_PASSWORD
+    username = os.environ['TEST_VENDOR_USERNAME']
+    password = os.environ['TEST_VENDOR_PASSWORD']
     return username, password
 
 @pytest.fixture

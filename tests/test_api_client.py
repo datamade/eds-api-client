@@ -3,10 +3,9 @@ import pytest
 import vcr
 
 from datetime import datetime
-import os
 
-from eds_api_client.api_client import AuthenticationError, EDSAPIClient
-from eds_api_client.web_client import EDSWebClient
+from src.api_client import AuthenticationError, EDSAPIClient
+from src.web_client import EDSWebClient
 
 
 APP_TIMEZONE = timezone('America/Chicago')

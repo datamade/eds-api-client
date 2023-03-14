@@ -1,14 +1,14 @@
 import uuid
-from configs import settings as env # replace with env vars
+import os
 
 SESSION_DATA = {
     'tracking_id': uuid.uuid4(),
-    'applicant': { 
+    'applicant': {
         'first_name': 'hannah',
         'middle_name': '',
         'last_name': 'cushman',
-        'username': env.TEST_VENDOR_USERNAME,
-        'password': env.TEST_VENDOR_PASSWORD,
+        'username': os.environ['TEST_VENDOR_USERNAME'],
+        'password': os.environ['TEST_VENDOR_PASSWORD'],
         'secret_question': 1,
         'secret_answer': 'chicago',
         'ssn': '123-99-9999',
@@ -174,8 +174,8 @@ EDS_DATA = {
         'first_name': 'hannah',
         'middle_name': '',
         'last_name': 'cushman',
-        'username': env.TEST_VENDOR_USERNAME,
-        'password': env.TEST_VENDOR_PASSWORD,
+        'username': os.environ['TEST_VENDOR_USERNAME'],
+        'password': os.environ['TEST_VENDOR_PASSWORD'],
         'secret_question': 1,
         'secret_answer': 'chicago',
         'ssn': '123-45-9999',

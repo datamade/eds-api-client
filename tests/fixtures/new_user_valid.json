@@ -1,0 +1,22 @@
+{ 
+    "user" : {
+        "userId" : "edsreserved_largelotsresident",
+        "firstName" : "large",
+        "lastName" : "lots",
+        "email" : "large.lots@datamade.us",
+        "title" : "lots and lots",
+        "phone" : "662-339-4512",
+        "secretQuestion" : 1,
+        "answerQuestion" : "Chicago",
+        "password" : "Password1"
+    },
+    "company" : {
+        "companyName" : "Big Lot Company II",
+        "ssn" : "125-43-1242",
+        "address1" : "33 W Main St",
+        "city" : "Chicago",
+        "state" : "IL",
+        "zipCode" : "60606",
+        "country" : "United States"
+    }
+}
