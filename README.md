@@ -10,6 +10,7 @@ From line 47 of `test_data/valid_eds_submission.json`, the whitespace must exist
 },
 ```
 
+## API endpoint ambiguity
 ```python
 # they said "The QA operations are actually available @: https://apiqa.chicago.gov/edsapi/rest/.. - see details below."
 # is it the same for prod? or will we need to somehow remove "rest" from the url?
