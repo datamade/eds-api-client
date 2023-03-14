@@ -24,3 +24,8 @@ classifiers = [
 [project.urls]
 "Homepage" = "https://github.com/datamade/eds-api-client"
 "Bug Tracker" = "https://github.com/datamade/eds-api-client/issues"
+
+[tool.pytest.ini_options]
+env = [
+    "TEST_VENDOR_USERNAME={TEST_VENDOR_USERNAME}"
+]
