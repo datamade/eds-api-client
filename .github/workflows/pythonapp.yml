@@ -5,7 +5,6 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
-    environment: testing
 
     steps:
     - uses: actions/checkout@v3
@@ -24,7 +23,25 @@ jobs:
         flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
         # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test with pytest    
+    - name: Test with pytest 
+      with:
+        EDS_CLIENT_ID: ${{ secrets.EDS_CLIENT_ID }}
+        EDS_CLIENT_SECRET: ${{ secrets.EDS_CLIENT_SECRET }}
+        EDS_CLIENT_USERNAME: ${{ secrets.EDS_CLIENT_USERNAME }}
+        EDS_CLIENT_PASSWORD: ${{ secrets.EDS_CLIENT_PASSWORD }}
+        EDS_DOMAIN_NAME: ${{ secrets.EDS_DOMAIN_NAME }}
+        EDS_UI_DOMAIN_NAME: ${{ secrets.EDS_UI_DOMAIN_NAME }}
+        TEST_VENDOR_USERNAME: ${{ secrets.TEST_VENDOR_USERNAME }}
+        TEST_VENDOR_PASSWORD: ${{ secrets.TEST_VENDOR_PASSWORD }}
+      env:
+        EDS_CLIENT_ID: ${{ secrets.EDS_CLIENT_ID }}
+        EDS_CLIENT_SECRET: ${{ secrets.EDS_CLIENT_SECRET }}
+        EDS_CLIENT_USERNAME: ${{ secrets.EDS_CLIENT_USERNAME }}
+        EDS_CLIENT_PASSWORD: ${{ secrets.EDS_CLIENT_PASSWORD }}
+        EDS_DOMAIN_NAME: ${{ secrets.EDS_DOMAIN_NAME }}
+        EDS_UI_DOMAIN_NAME: ${{ secrets.EDS_UI_DOMAIN_NAME }}
+        TEST_VENDOR_USERNAME: ${{ secrets.TEST_VENDOR_USERNAME }}
+        TEST_VENDOR_PASSWORD: ${{ secrets.TEST_VENDOR_PASSWORD }}
       run: |
         pip install -r requirements.txt
         pytest
