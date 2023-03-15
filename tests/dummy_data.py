@@ -31,7 +31,7 @@ SESSION_DATA = {
             {
                 'first_name': 'Derek',
                 'last_name': 'Eder',
-                'relationship_type': 'past', # past or anticipated
+                'relationship_type': 'past',  # past or anticipated
                 'description': 'I raked his leaves.'
             }
         ]
@@ -195,7 +195,7 @@ EDS_DATA = {
             'first_name': 'Eric',
             'last_name': 'van Zanten',
             'description': 'MC (Master of Cemeteries)',
-            'relationship_type': 'past' # past or anticipated
+            'relationship_type': 'past'  # past or anticipated
         }
     ],
     'financial_stakeholders': [

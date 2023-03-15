@@ -21,7 +21,7 @@ class EDSWebClient(scrapelib.RetrySession):
 
     def _login_user(self):
         """
-        Returns a dict with the outcome of a user login. 
+        Returns a dict with the outcome of a user login.
         """
         login_url = '{domain}/login'.format(domain=self.domain)
 

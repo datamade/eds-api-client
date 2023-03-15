@@ -13,6 +13,7 @@ APP_TIMEZONE = timezone('America/Chicago')
 MAINTENANCE_START = datetime(2019, 2, 6, 19, tzinfo=APP_TIMEZONE)
 MAINTENANCE_END = datetime(2019, 2, 7, tzinfo=APP_TIMEZONE)
 
+
 @vcr.use_cassette('tests/fixtures/vcr_cassettes/login_valid.yaml')
 def test_valid_login(api_client, user):
     username, password = user
@@ -90,7 +91,7 @@ def test_client_errors(api_client, web_client):
     with pytest.raises(ValueError):
         api_client.submit_eds({}, 'username', 'password')
 
-    with pytest.raises(TypeError) as e:
+    with pytest.raises(TypeError):
         api_client.register_user('username', 'password')
 
     with pytest.raises(TypeError):

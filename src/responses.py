@@ -123,7 +123,7 @@ class ResponseTypes():
             '250': 'SPOUSE',
             '251': 'DOMESTIC_PARTNER'
         }
-        
+
         family_titles = {
             '244': 'MAYOR',
             '245': 'ALDERMAN',

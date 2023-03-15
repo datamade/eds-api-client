@@ -156,7 +156,7 @@ class Submission():
     def debarment_details(self, data):
         if data:
             self._questions.append({
-                'questionCode': 'CERTIFY1_EXPLAIN', 
+                'questionCode': 'CERTIFY1_EXPLAIN',
                 'textResponse': data
             })
 
