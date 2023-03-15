@@ -34,8 +34,8 @@ url = "{domain}/edsapi/rest/eds/".format(domain=self.domain)
 Some of the responses look like this:
 ```
 {
-   "questionCode":"DBA", 
-   "textResponse":"Big Lot Test" 
+   "questionCode":"DBA",
+   "textResponse":"Big Lot Test"
 },
 {
     "questionCode":"DISCLOSING_ADDRESS",
@@ -56,7 +56,7 @@ The API gave me no indication of why the request was bad. The request was bad be
 
 ## Misspelling in questionCode
 API requires this questionCode misspelling. This will break if they ever change it, but it's spelled this way in the API docs, too.
-```json
+```
     {
         'questionCode': 'FINANTIAL_INTEREST',
         'singleChoosableResponse': response_builder.determine_yes_or_no(submission['financial_stakeholders'])
