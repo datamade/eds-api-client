@@ -1,3 +1,4 @@
 pytz==2018.9
 pytest
+pytest-env
 vcrpy
