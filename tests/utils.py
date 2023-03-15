@@ -8,5 +8,5 @@ def unique_applicant():
 
     dummy_ssn = ''.join([str(random.randint(0, 9)) for i in range(0, 9)])
     formatted_ssn = '%s-%s-%s' % (dummy_ssn[0:3], dummy_ssn[3:5], dummy_ssn[5:])
-    
+
     return username, email_address, formatted_ssn

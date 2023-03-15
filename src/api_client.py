@@ -2,8 +2,10 @@ import scrapelib
 import logging
 import json
 
+
 class AuthenticationError(Exception):
     pass
+
 
 class EDSAPIClient(scrapelib.RetrySession):
     def __init__(self, client_id, client_secret, domain='https://apiqa.chicago.gov'):
@@ -11,7 +13,7 @@ class EDSAPIClient(scrapelib.RetrySession):
         self._retry_attempts = 2
         self._retry_wait_seconds = 0.1
         self.domain = domain
-        
+
         if not all([client_id, client_secret]):
             raise ValueError('Must provide a client_id and a client_secret.')
         else:
@@ -43,7 +45,7 @@ class EDSAPIClient(scrapelib.RetrySession):
         else:
             logging.error('Failed to get access token for username: {username}'.format(username=username))
             raise AuthenticationError({'status_code': response.status_code,
-                                        'content': str(response.content)})
+                                       'content': str(response.content)})
 
     def submit_eds(self, eds_data, username, password):
         """Submits an EDS. Requires the EDS data and the vendor's username/password."""
@@ -68,7 +70,6 @@ class EDSAPIClient(scrapelib.RetrySession):
         except AuthenticationError as e:
             logging.error(e)
 
-
     def register_user(self, new_user_data, app_username, app_password):
         """Registers a new user. Requires the application's username and password."""
 
@@ -84,7 +85,7 @@ class EDSAPIClient(scrapelib.RetrySession):
                 'Authorization': "Bearer {token}".format(token=access_token),
                 'Content-Type': 'application/json'
             }
-            
+
             url = "{domain}/edsapi/rest/user/".format(domain=self.domain)
             response = self.post(url, json=new_user_data, headers=headers)
             return response

@@ -1,6 +1,7 @@
 import json
 from .responses import ResponseTypes
 
+
 class Submission():
     def __init__(self):
         self._questions = []
@@ -25,7 +26,7 @@ class Submission():
     def disclosing_address(self, data):
         self._questions.append({
             'questionCode': 'DISCLOSING_ADDRESS',
-            'addressResponse': ResponseTypes().address_response(data) # how to make these key names publicly available?
+            'addressResponse': ResponseTypes().address_response(data)  # how to make these key names publicly available?
         })
 
     def phone(self, data):
@@ -43,7 +44,7 @@ class Submission():
     def po_desc(self, data):
         self._questions.append({
             'questionCode': 'PO_DESC',
-            'textResponse': data 
+            'textResponse': data
         })
 
     def spec_num(self, data):
@@ -62,7 +63,7 @@ class Submission():
         self._questions.append({
             # The API requires this whitespace
             'questionCode': 'NATURE_DISCLOSING_PARTY       ',
-            'singleChoosableResponse': data, 
+            'singleChoosableResponse': data,
         })
 
     # Section III - Income or Compensation to, or Ownership by, City Elected Officials
@@ -87,7 +88,7 @@ class Submission():
 
     def city_official_financial_interest(self, data):
         self._questions.append({
-            # API requires this questionCode misspelling. This will break if 
+            # API requires this questionCode misspelling. This will break if
             # they ever change it, but it's spelled this way in the API docs, too.
             'questionCode': 'FINANTIAL_INTEREST',
             'singleChoosableResponse': ResponseTypes().yes_or_no(data)
@@ -96,7 +97,7 @@ class Submission():
     def city_official_interest_details(self, data):
         if data:
             self._questions.append({
-                'questionCode': 'CITY_OFF_NAMES', 
+                'questionCode': 'CITY_OFF_NAMES',
                 'complexResponse': ResponseTypes().city_official_interest_complex(data)
             })
 
@@ -145,7 +146,7 @@ class Submission():
             'questionCode': 'FURTHERCLARIFICATIONS',
             'singleChoosableResponse': data,
         })
-    
+
     def debarment_crimes_civil_judgements(self, data):
         self._questions.append({
             'questionCode': 'CERTIFY1',
@@ -216,7 +217,7 @@ class Submission():
             'questionCode': 'CERTIFY7',
             'singleChoosableResponse': ResponseTypes().disclosure(data)
         })
-    
+
     def employed_city_official_details(self, data):
         if data:
             self._questions.append({
@@ -226,7 +227,7 @@ class Submission():
 
     def tax_and_fee_deliquency(self, data):
         self._questions.append({
-            'questionCode': 'H1CERTIFY', 
+            'questionCode': 'H1CERTIFY',
             'singleChoosableResponse': ResponseTypes().certification(data)
         })
 
@@ -333,7 +334,7 @@ class Submission():
 
     def acknowledgements_1(self, data):
         self._questions.append({
-            'questionCode': 'ACKNOWLEDGEMENTS', 
+            'questionCode': 'ACKNOWLEDGEMENTS',
             'multiChoosableResponse': [data],
         })
 

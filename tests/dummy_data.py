@@ -25,9 +25,9 @@ SESSION_DATA = {
     'city_employee': {
         'city_employee': 0
     },
-    'income_or_compensation': { 
+    'income_or_compensation': {
         'boolean': 1,
-        'income_or_compensation': [  
+        'income_or_compensation': [
             {
                 'first_name': 'Derek',
                 'last_name': 'Eder',
@@ -36,20 +36,20 @@ SESSION_DATA = {
             }
         ]
     },
-    'employees': { 
-        'boolean': 1, 
-        'employees': [  
-            {  
+    'employees': {
+        'boolean': 1,
+        'employees': [
+            {
                 'first_name': 'Rahm',
                 'last_name': 'Emanuel',
                 'position': 'Mayor'
             }
         ]
     },
-    'financial_obligation': {  
+    'financial_obligation': {
         'boolean': 1,
-        'financial_obligation': [  
-            { 
+        'financial_obligation': [
+            {
                 'first_name': 'Regina',
                 'last_name': 'Compton',
                 'position': '511',
@@ -57,10 +57,10 @@ SESSION_DATA = {
             }
         ]
     },
-    'gifts': { 
+    'gifts': {
         'boolean': 1,
-        'gifts': [  
-            {                  
+        'gifts': [
+            {
                 'first_name': 'Derek',
                 'last_name': 'Eder',
                 'gift': 'Time',
@@ -68,10 +68,10 @@ SESSION_DATA = {
             }
         ]
     },
-    'family': {  
+    'family': {
         'boolean': 1,
-        'family': [  
-            {  
+        'family': [
+            {
                 'first_name': 'Anna',
                 'last_name': 'Valencia',
                 'title': '246',
@@ -79,10 +79,10 @@ SESSION_DATA = {
             }
         ]
     },
-    'retained_parties': {  
+    'retained_parties': {
         'boolean': 1,
-        'retained_parties': [  
-            {  
+        'retained_parties': [
+            {
                 'first_name': 'Eric',
                 'last_name': 'van Zanten',
                 'role': '4',
@@ -100,32 +100,32 @@ SESSION_DATA = {
             }
         ]
     },
-    'individual_criminal_history': {  
-        'individual_criminal_history': {  
+    'individual_criminal_history': {
+        'individual_criminal_history': {
             'boolean': 0,
             'expl': ''
         }
     },
-    'group_criminal_history': {  
-        'group_criminal_history': {  
+    'group_criminal_history': {
+        'group_criminal_history': {
             'boolean': 1,
             'expl': 'live together, die alone'
         }
     },
-    'disqualifications': {  
-        'bid_rigging': {  
+    'disqualifications': {
+        'bid_rigging': {
             'boolean': 0,
             'expl': ''
         },
-        'sanctions_list': {  
+        'sanctions_list': {
             'boolean': 1,
             'expl': '"most likely to succeed"'
         }
     },
-    'problem_properties': {  
+    'problem_properties': {
         'boolean': 1,
-        'problem_properties': [  
-            {  
+        'problem_properties': [
+            {
                 'address_1': '456 S Main',
                 'address_2': '',
                 'address_3': '',
@@ -136,30 +136,30 @@ SESSION_DATA = {
             }
         ]
     },
-    'conduct_compliance': {  
-        'conduct_compliance': {  
+    'conduct_compliance': {
+        'conduct_compliance': {
             'boolean': 0,
             'expl': ''
         }
     },
-    'child_support_compliance': {  
+    'child_support_compliance': {
         'behind_on_child_support': 0
     },
-    'payment_and_hiring_compliance': {  
-        'payment_compliance': {  
+    'payment_and_hiring_compliance': {
+        'payment_compliance': {
             'boolean': 0,
             'expl': ''
         },
-        'environmental_compliance': {  
+        'environmental_compliance': {
             'boolean': 1,
             'expl': "don't tread on me"
         },
-        'hiring_compliance': {  
+        'hiring_compliance': {
             'boolean': 0,
             'expl': ''
         }
     },
-    'closing_acknowledgements': {  
+    'closing_acknowledgements': {
         'void_if_false': 'y',
         'kept_current': 'y',
         'public_record': 'y',

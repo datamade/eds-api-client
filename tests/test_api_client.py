@@ -42,7 +42,7 @@ def test_invalid_eds_submission(api_client, user, invalid_submission):
     username, password = user
 
     response = api_client.submit_eds(invalid_submission, username, password)
-    
+
     assert response.status_code == 400
     assert b'errors' in response.content
     assert b'BAD_REQUEST' in response.content
