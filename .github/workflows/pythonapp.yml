@@ -1,0 +1,38 @@
+name: tests
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install .
+    - name: Lint with flake8
+      run: |
+        pip install flake8
+        # stop the build if there are Python syntax errors or undefined names
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+    - name: Test with pytest
+      env:
+        EDS_CLIENT_ID: ${{ secrets.EDS_CLIENT_ID }}
+        EDS_CLIENT_SECRET: ${{ secrets.EDS_CLIENT_SECRET }}
+        EDS_CLIENT_USERNAME: ${{ secrets.EDS_CLIENT_USERNAME }}
+        EDS_CLIENT_PASSWORD: ${{ secrets.EDS_CLIENT_PASSWORD }}
+        EDS_DOMAIN_NAME: ${{ secrets.EDS_DOMAIN_NAME }}
+        EDS_UI_DOMAIN_NAME: ${{ secrets.EDS_UI_DOMAIN_NAME }}
+        TEST_VENDOR_USERNAME: ${{ secrets.TEST_VENDOR_USERNAME }}
+        TEST_VENDOR_PASSWORD: ${{ secrets.TEST_VENDOR_PASSWORD }}
+      run: |
+        pip install -r test_requirements.txt
+        pytest

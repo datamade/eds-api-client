@@ -7,7 +7,7 @@ name = "eds_api_client_datamade"
 version = "0.0.1"
 dependencies = [
     "lxml==4.9.2",
-    "scrapelib==2.1.0"
+    "scrapelib==2.1.0",
 ]
 authors = [
     { name="DataMade", email="info@datamade.us"}

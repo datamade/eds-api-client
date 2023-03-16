@@ -35,7 +35,7 @@ class ResponseTypes():
 
     def build_complex_response(self, answers, shape):
         """
-        Returns a list of complex_responses, based 
+        Returns a list of complex_responses, based
         upon the argument "shape", which is a function
         that shapes the response.
         """
@@ -50,7 +50,7 @@ class ResponseTypes():
     def city_official_compensation_complex(self, answers):
 
         # Create an anonymous function to be passed into the
-        # function that builds the responses. This anonymous function 
+        # function that builds the responses. This anonymous function
         # creates the shape of the response.
         shape = lambda answer: [
             {
@@ -62,7 +62,7 @@ class ResponseTypes():
                 'textResponse': answer['description']
             }
         ]
-        
+
         # Pass shape() in to this function and it will help
         # return an array of complex responses.
         complex_response = self.build_complex_response(answers, shape)
@@ -123,7 +123,7 @@ class ResponseTypes():
             '250': 'SPOUSE',
             '251': 'DOMESTIC_PARTNER'
         }
-        
+
         family_titles = {
             '244': 'MAYOR',
             '245': 'ALDERMAN',
@@ -144,7 +144,7 @@ class ResponseTypes():
             {
                 'responseCode': 'RELATION_TO_OFFICIAL',
                 'singleChoosableResponse': family_relationships[answer['applicant_relationship']],
-            }, 
+            },
             {
                 'responseCode': 'NON-CITY_INDIVIDUAL',
                 'nameResponse': self.name_response(answer['applicant'])
@@ -178,7 +178,7 @@ class ResponseTypes():
             {
                 'responseCode': 'NAME',
                 'nameResponse': self.name_response(answer)
-            }, 
+            },
             {
                 'responseCode': 'CITY_TITLE',
                 'textResponse': answer['position']
@@ -216,7 +216,7 @@ class ResponseTypes():
             }
         else:
             return {
-                'textResponse': '{first} {last}'.format(first=answer['first_name'], 
+                'textResponse': '{first} {last}'.format(first=answer['first_name'],
                                                         last=answer['last_name'])
             }
 

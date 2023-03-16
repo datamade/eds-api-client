@@ -340,7 +340,7 @@ retained_party_roles = [
     ('6', 'Non-MWDBE Subcontractor'),
     ('7', 'Supplier'),
     ('8', 'Other')
-] 
+]
 
 family_titles = [
     ('244', 'Mayor'),
@@ -381,4 +381,4 @@ stakeholder_titles = [
     ('511', 'City official'),
     ('512', 'Spouse'),
     ('513', 'Domestic partner')
-] 
+]

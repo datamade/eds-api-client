@@ -1,0 +1,47 @@
+interactions:
+- request:
+    body: username=biglotsuser&client_secret=fakesecret&scope=write&password=password&grant_type=password&client_id=fakebiglots
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '117'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.13.0
+    method: POST
+    uri: https://apiqa.chicago.gov/edsapi/oauth/token
+  response:
+    body:
+      string: "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\">\n
+        \   <soapenv:Body>\n        <soapenv:Fault>\n            <faultcode>soapenv:Server</faultcode>\n
+        \           <faultstring>Policy Falsified</faultstring>\n            <faultactor>https://apiqa.chicago.gov/edsapi/oauth/token</faultactor>\n
+        \           <detail>\n                <l7:policyResult status=\"Assertion
+        Falsified\" xmlns:l7=\"http://www.layer7tech.com/ws/policy/fault\"/>\n            </detail>\n
+        \       </soapenv:Fault>\n    </soapenv:Body>\n</soapenv:Envelope>\n"
+    headers:
+      Content-Length:
+      - '572'
+      Content-Type:
+      - text/xml;charset=utf-8
+      Date:
+      - Wed, 31 Mar 2021 18:44:12 GMT
+      Server:
+      - CA-API-Gateway/9.0
+      Set-Cookie:
+      - BIGipServerrevproxy.chicago.gov_https.app~revproxy.chicago.gov_https_pool=387080202.52008.0000;
+        path=/; Httponly; Secure
+      Vary:
+      - Accept-Encoding
+      X-Cnection:
+      - close
+      - close
+    status:
+      code: 500
+      message: Internal Server Error
+version: 1

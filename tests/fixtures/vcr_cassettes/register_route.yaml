@@ -1,0 +1,105 @@
+interactions:
+- request:
+    body: username=fakebiglots&client_secret=fakesecret&scope=write&password=Fakepassword1&grant_type=password&client_id=fakebiglots
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '124'
+      Content-Type:
+      - application/x-www-form-urlencoded
+      User-Agent:
+      - python-requests/2.13.0
+    method: POST
+    uri: https://apiqa.chicago.gov/edsapi/oauth/token
+  response:
+    body:
+      string: '{"access_token":"7a1c96f1-53e0-4acd-92ff-24dc71416c8e","token_type":"bearer","expires_in":2819,"scope":"write"}'
+    headers:
+      Cache-Control:
+      - no-store
+      Connection:
+      - Keep-Alive
+      Content-Length:
+      - '111'
+      Content-Type:
+      - application/json;charset=UTF-8
+      Date:
+      - Mon, 05 Apr 2021 21:41:41 GMT
+      Keep-Alive:
+      - timeout=5, max=100
+      Pragma:
+      - no-cache
+      Server:
+      - CA-API-Gateway/9.0
+      Set-Cookie:
+      - BIGipServerwebapps1qa.chicago.gov_https.app~webapps1qa.chicago.gov_https_pool=941905930.21308.0000;
+        path=/; Httponly; Secure
+      - BIGipServerrevproxy.chicago.gov_https.app~revproxy.chicago.gov_https_pool=387080202.52008.0000;
+        path=/; Httponly; Secure
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      Vary:
+      - Accept-Encoding
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"company": {"companyName": "Individual", "country": "United States", "address2":
+      "", "zipCode": "60606", "city": "Chicago", "state": "IL", "address1": "123 Main
+      St.", "ssn": "123-12-1198"}, "user": {"lastName": "mcalilly", "title": "Individual",
+      "secretQuestion": "1", "answerQuestion": "chicago", "firstName": "sam", "email":
+      "sam.mcalilly@datamade.us", "userId": "edsreserved_register_test", "password":
+      "Password1", "phone": "662-222-2222"}}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Authorization:
+      - Bearer 7a1c96f1-53e0-4acd-92ff-24dc71416c8e
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '445'
+      Content-Type:
+      - application/json
+      Cookie:
+      - BIGipServerwebapps1qa.chicago.gov_https.app~webapps1qa.chicago.gov_https_pool=941905930.21308.0000;
+        BIGipServerrevproxy.chicago.gov_https.app~revproxy.chicago.gov_https_pool=387080202.52008.0000
+      User-Agent:
+      - python-requests/2.13.0
+    method: POST
+    uri: https://apiqa.chicago.gov/edsapi/rest/user/
+  response:
+    body:
+      string: '{"status":"Success"}'
+    headers:
+      Connection:
+      - Keep-Alive
+      Content-Length:
+      - '20'
+      Content-Type:
+      - application/json
+      Date:
+      - Mon, 05 Apr 2021 21:41:43 GMT
+      Keep-Alive:
+      - timeout=5, max=99
+      Server:
+      - CA-API-Gateway/9.0
+      Vary:
+      - Accept-Encoding
+    status:
+      code: 200
+      message: OK
+version: 1

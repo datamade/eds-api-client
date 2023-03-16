@@ -2,6 +2,7 @@ from io import StringIO
 from lxml import etree
 import scrapelib
 
+
 class EDSWebClient(scrapelib.RetrySession):
     """
     Web scraper for the EDS UI.
@@ -20,27 +21,27 @@ class EDSWebClient(scrapelib.RetrySession):
 
     def _login_user(self):
         """
-        Returns a dict with the outcome of a user login. 
+        Returns a dict with the outcome of a user login.
         """
         login_url = '{domain}/login'.format(domain=self.domain)
-        
+
         # get the login page so we can get the CSRF token
         response = self.get(login_url)
-        
+
         # parse out the CSRF token
         parser = etree.HTMLParser()
         html = response.content.decode('utf-8')
         tree = etree.parse(StringIO(html), parser)
         input_elements = tree.xpath('//input')
-        
+
         csrf_token = [elem.get('value') for elem in input_elements if elem.get('name') == '_csrf']
-        
+
         payload = {
             '_csrf': csrf_token[0],
             'username': self.username,
-            'password': self.password,   
+            'password': self.password,
         }
-        
+
         login_response = self.post(login_url, data=payload)
 
         # determine login response since either valid or invalid credentials return a 200
