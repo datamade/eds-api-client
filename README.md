@@ -38,4 +38,3 @@ response = api_client.submit_eds(submission_data, client_username, client_passwo
 ## Copyright and attribution
 
 Copyright (c) 2023 DataMade. Released under the [MIT License](https://github.com/datamade/eds-api-client/blob/main/LICENSE).
-```
