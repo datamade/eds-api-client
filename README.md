@@ -1,8 +1,5 @@
 # Electronic Disclosure Statement (EDS) API Client
 
-```
-# *Project title*
-
 This driver allows other projects to interact with the City of Chicago's EDS system.
 
 ## Setup
@@ -40,5 +37,5 @@ response = api_client.submit_eds(submission_data, client_username, client_passwo
 
 ## Copyright and attribution
 
-Copyright (c) 2016 DataMade. Released under the [MIT License](https://github.com/datamade/your-repo-here/blob/master/LICENSE).
+Copyright (c) 2023 DataMade. Released under the [MIT License](https://github.com/datamade/eds-api-client/blob/main/LICENSE).
 ```

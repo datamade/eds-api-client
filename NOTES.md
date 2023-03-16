@@ -3,7 +3,7 @@
 ## Whitespace for NATURE_DISCLOSING_PARTY questionCode
 
 From line 47 of `test_data/valid_eds_submission.json`, the whitespace must exist otherwise it will return a validation error:
-```json
+```
 {
     "questionCode":"NATURE_DISCLOSING_PARTY       ",
     "singleChoosableResponse":"PERSON_OR_SOLE_PROPRIETOR"
@@ -22,7 +22,7 @@ url = "{domain}/edsapi/rest/eds/".format(domain=self.domain)
 
 
 ## There is a typo in one of the question codes, test that this misspelling is required for successful submission
-```json
+```
 {
     "questionCode":"FINANTIAL_INTEREST",
     "singleChoosableResponse":"YES"
