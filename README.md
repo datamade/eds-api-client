@@ -35,6 +35,24 @@ response = api_client._get_access_token(client_username, client_password)
 response = api_client.submit_eds(submission_data, client_username, client_password)
 ```
 
+## Development
+
+Clone this repository, create a virtual environment, then install the package and test requirements.
+
+```bash
+git clone https://github.com/datamade/eds-api-client.git
+python3 -m venv ~/.virtualenvs/python-eds-client
+source ~/.virtualends/python-eds-client
+pip install -e .
+pip install -r test_requirements.txt
+```
+
+To run the tests:
+
+```bash
+pytest -sv
+```
+
 ## Copyright and attribution
 
 Copyright (c) 2023 DataMade. Released under the [MIT License](https://github.com/datamade/eds-api-client/blob/main/LICENSE).

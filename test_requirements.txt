@@ -1,3 +1,5 @@
 pytz==2018.9
 pytest
-vcrpy
+pytest-dotenv
+urllib3<2.0
+vcrpy<3.0
